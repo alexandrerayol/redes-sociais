@@ -1,0 +1,113 @@
+@charset "UTF-8";
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@keyframes anima-icones{
+    0% {
+        transform: scale(0.8) translate(0px, 0px);
+    }
+
+    50% {
+        transform: scale(1.03) translate(-4px, -4px);
+    }
+    100% {
+        transform: scale(1.0) translate(0px, 0px);
+    }
+}
+
+html,body {
+
+    width: 100vw;
+    height: 100vh;
+
+}
+
+body{
+
+    background-image: url('/curso-em-video/projetos/projeto-redes-sociais/images/fundo-madeira.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+main {
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    gap: 25px;
+}
+
+#container-telefone{
+    width: 100vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.telefone{
+    width: 320px;
+    height: 650px;
+
+    background-color: rgba(127, 255, 212, 0);
+    background-image: url('../images/frame-iphone.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    position: fixed; /*deixa os elementos desta class fixos*/
+}
+
+.telefone iframe{
+    width: 278px;
+    height: 489px;
+
+    position: relative;
+    top: 82.5px;
+    left: 21px;
+}
+
+/*width 0px para não ocupar
+ o espaço do telefone, serve
+ penas para posicionar os icones
+ mais que 0px iria descentralizar 
+ o telefone
+ */
+
+#container-redes-sociais{
+    width: 0px; 
+    
+    display: flex;
+    justify-content: right;
+}
+.redes-sociais{
+    width: 90px;
+    height: 650px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    gap: 25px;
+
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.redes-sociais img{
+    width: 75px;
+    border-radius: 50%;
+    box-shadow: 3px 3px 12px #000000cc;
+    
+}
+
+.redes-sociais img:hover{
+    animation: anima-icones 0.3s ease-in-out;
+    border: 2px solid white;
+}
